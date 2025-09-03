@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+    color: white;
+    font-family: 'Press Start 2P', cursive; /* Piksel fontu için örnek, istersen değiştirebiliriz */
+}
+
+/* Basit bir piksel fontu için import. Gerçek projede bir CDN'den çekilebilir */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.game-container {
+    background-color: #5a5a5a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border: 3px solid #777;
+}
+
+h1 {
+    color: #ffd700; /* Altın sarısı */
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#gameArea {
+    width: 600px;
+    height: 400px;
+    /* background-color: #8b4513; /* Çöl kahverengisi */ /* Bu satırı silebilirsin */
+    background-image: url('background.png'); /* BURAYA KENDİ GÖRSELİNİN URL'SİNİ EKLE */
+    background-size: cover; /* Arka planı tamamen kapla */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Tekrar etme */
+    border: 4px solid #4a2d0b;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cowboy {
+    position: absolute;
+    width: 150px; /* Görselin boyutuna göre ayarlanacak */
+    height: 250px; /* Görselin boyutuna göre ayarlanacak */
+    background-color: transparent; /* Şimdilik yer tutucu */
+    /* background-image: url('cowboy.png'); // Görsel buraya gelecek */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Kovboy harfin arkasında kalmasın */
+}
+
+
+#message {
+    position: absolute;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+#targetLetter {
+    position: absolute;
+    font-size: 5em;
+    color: #ff0000; /* Kırmızı harf */
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    cursor: pointer; /* Tıklanabilir olduğunu belirtir */
+    z-index: 10;
+}
+
+button {
+    background-color: #4CAF50; /* Yeşil */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button#restartButton {
+    background-color: #007bff;
+}
+
+button#restartButton:hover {
+    background-color: #0056b3;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+#gameOverScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+#gameOverScreen h2 {
+    color: #ff0000;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#gameOverScreen p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.score-board {
+    margin-top: 20px;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #666;
+    font-size: 1.1em;
+}
+
+.score-board p {
+    margin: 5px 0;
+}
+
+.score-board span {
+    color: #ffd700;
+    font-weight: bold;
+}

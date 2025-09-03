@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kovboy Refleks Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Kovboy Refleks Düellosu</h1>
+        
+        <div id="gameArea">
+            <div id="cowboy"></div> 
+            
+            <div id="message" class="hidden">Hazırlan...</div>
+            <div id="targetLetter" class="hidden"></div>
+            
+            <button id="startButton">Oyunu Başlat!</button>
+            <div id="gameOverScreen" class="hidden">
+                <h2>Game Over!</h2>
+                <p id="gameOverMessage"></p>
+                <button id="restartButton">Tekrar Oyna</button>
+            </div>
+        </div>
+
+        <div class="score-board">
+            <p>Seviye: <span id="levelDisplay">1</span></p>
+            <p>Son Süre: <span id="lastReactionTime">0</span> ms</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
